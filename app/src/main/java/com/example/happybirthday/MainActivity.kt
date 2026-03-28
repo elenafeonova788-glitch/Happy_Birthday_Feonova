@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
                 ){
                     GreetingImage(
                         message = getString(R.string.happy_birthday_text),
-                        from = "From Lena",
+                        from = getString(R.string.signature_text),
                         modifier = Modifier.padding(8.dp)
                     )
                 }
@@ -93,8 +93,9 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier){
 @Composable
 fun BirthdayCardPreview() {
     HappyBirthdayTheme {
-        GreetingImage(
-            message = "Happy Birthday Gelya!",
-            from = "From Lena")
+        GreetingImage (
+            message = stringResource(R.string.happy_birthday_text),
+            from = stringResource(R.string.signature_text)
+        )
     }
 }
